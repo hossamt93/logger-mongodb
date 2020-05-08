@@ -16,7 +16,10 @@
 		"logger",
     "js logger",
     "mongo logger"
-	],
+  ],
+  "dependencies": {
+    "mongodb":"2.2.33"
+  },
   "author": "Hossam Taha <hossamtaha771@gmail.com>",
   "license": "MIT"
 }

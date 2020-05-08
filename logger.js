@@ -40,7 +40,7 @@ function SaveLogToDB(dbURL,document){
             if(err)
                 throw err;
 
-            db.collection("log").insertOne(document, function(err, res) {
+            db.collection('log').insertOne(document, function(err, res) {
                     if (err) throw err;
 
                 db.close();
