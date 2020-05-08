@@ -1,12 +1,12 @@
-# MongoDB Logger
+# Logger MongoDB
 
-The most powerfull mongoDB logger package
+A powerfull mongoDB logger package
 
 
 ## Install
 
 ```
-npm install mongodb_logger
+npm install logger-mongodb
 ```
 
 ## Why MongoDB Logger is powerful?
@@ -24,9 +24,9 @@ npm install mongodb_logger
 
 1- import mongoDB logger into your app
 
-``` var MongoLogger=require('mongodb_logger');``` 
+``` var MongoLogger=require('logger-mongodb');``` 
 
- or ``` import * as MongoLogger from 'mongodb_logger' ```
+ or ``` import * as MongoLogger from 'logger-mongodb' ```
 
  2- register Mongologger as middleware logger
 
@@ -50,11 +50,11 @@ npm install mongodb_logger
  1- import mongodb logger into your controller
 
 ```typescript
- var MongoLogger=require('mongo_logger');
+ var MongoLogger=require('logger-mongodb');
 
   or 
 
-  import * as MongoLogger from 'mongo_logger'
+  import * as MongoLogger from 'logger-mongodb'
 ```
 
  2- use MongoLogger into you api
@@ -72,9 +72,9 @@ npm install mongodb_logger
 
 ## `Note`
 
- - `mongodb_logger` uses currently mongodb 2.2.33 so `dbUrl` should be `mongodb://mongodb0.example.com:27017/dbName`
+ - `logger-mongodb` uses currently mongodb 2.2.33 so `dbUrl` should be `mongodb://mongodb0.example.com:27017/dbName`
 
 
  ## Change log
-You can take a look at the change log [here](https://github.com/hossamt93/mongodb_logger/blob/master/CHANGELOG.md)
+You can take a look at the change log [here](https://github.com/hossamt93/logger-mongodb/blob/master/CHANGELOG.md)
 

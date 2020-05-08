@@ -1,6 +1,6 @@
 {
-  "name": "mongodb_logger",
-  "version": "1.0.0",
+  "name": "logger-mongodb",
+  "version": "1.0.1",
   "description": "The most powerful mongo logger package",
   "main": "logger.js",
   "scripts": {
@@ -8,12 +8,12 @@
   },
   "repository": {
 		"type": "git",
-		"url": "https://github.com/hossamt93/mongodb_logger.git"
+		"url": "https://github.com/hossamt93/logger-mongodb.git"
   },
 	"bugs": {
-		"url": "https://github.com/hossamt93/mongodb_logger/issues"
+		"url": "https://github.com/hossamt93/logger-mongodb/issues"
 	},
-	"homepage": "https://github.com/hossamt93/mongodb_logger/blob/master/README.md",
+	"homepage": "https://github.com/hossamt93/logger-mongodb/blob/master/README.md",
 	"keywords": [
 		"mongo",
 		"mongodb",
