@@ -6,7 +6,7 @@ module.exports={
         
         if(document && document !=undefined){
             document.logLevel='Info'
-            this.SaveLogToDB(dbURL,doc);   
+            this.SaveLogToDB(dbURL,document);   
         }
     },
 
@@ -14,33 +14,33 @@ module.exports={
 
         if(document  && document !=undefined){
             document.logLevel='Error'
-            this.SaveLogToDB(dbURL,doc);   
+            this.SaveLogToDB(dbURL,document);   
         }
     },
     logWarn: function (document, dbURL) {
 
         if(document && document !=undefined){
             document.logLevel='Warn'
-            this.SaveLogToDB(dbURL,doc);   
+            this.SaveLogToDB(dbURL,document);   
         }
     },
     logDebug: function (document, dbURL) {
 
         if(document && document !=undefined){
             document.logLevel='Debug'
-            this.SaveLogToDB(dbURL,doc);   
+            this.SaveLogToDB(dbURL,document);   
         }
     },
 
 
-    SaveLogToDB: function(dbURL,doc){
+    SaveLogToDB: function(dbURL,document){
         try
         {
             mongodb.MongoClient.connect(dbURL,function (err,db) {
                 if(err)
                     throw err;
 
-                db.collection("log").insertOne(doc, function(err, res) {
+                db.collection("log").insertOne(document, function(err, res) {
                         if (err) throw err;
 
                     db.close();
