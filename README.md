@@ -76,5 +76,5 @@ npm install mongodb_logger
 
 
  ## Change log
-You can take a look at the change log [here](https://github.com/hossamt93/mongo_logger/blob/master/CHANGELOG.md)
+You can take a look at the change log [here](https://github.com/hossamt93/mongodb_logger/blob/master/CHANGELOG.md)
 

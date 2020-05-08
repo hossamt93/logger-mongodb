@@ -8,12 +8,12 @@
   },
   "repository": {
 		"type": "git",
-		"url": "https://github.com/hossamt93/mongo_logger.git"
+		"url": "https://github.com/hossamt93/mongodb_logger.git"
   },
 	"bugs": {
-		"url": "https://github.com/hossamt93/mongo_logger/issues"
+		"url": "https://github.com/hossamt93/mongodb_logger/issues"
 	},
-	"homepage": "https://github.com/hossamt93/mongo_logger/blob/master/README.md",
+	"homepage": "https://github.com/hossamt93/mongodb_logger/blob/master/README.md",
 	"keywords": [
 		"mongo",
 		"mongodb",
