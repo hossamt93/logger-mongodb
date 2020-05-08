@@ -1,6 +1,6 @@
 {
   "name": "logger-mongodb",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The most powerful mongo logger package",
   "main": "logger.js",
   "scripts": {
