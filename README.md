@@ -70,5 +70,7 @@ npm install mongo_logger
    mongoLogger.LogInfo(doc,DBUrl)
    ```
 
+## `Note`
 
+ - `mongo_logger` uses currently mongodb 2.2.33 so `dbUrl` should be `mongodb://mongodb0.example.com:27017/dbName`
 
