@@ -30,6 +30,7 @@ npm install mongo_logger
 
  2- register mongologger as middleware logger
 
+```typescript
  app.use(function(req,res,next){
      if(res.statusCode == 200){
          var logDoc={
@@ -42,18 +43,24 @@ npm install mongo_logger
 
   next();
  });
+ ```
 
  ### 1- use mongo logger in your api Controller
 
  1- import mongo logger into your controller
 
-``` var mongoLogger=require('mongo_logger');``` 
+```typescript
+ var mongoLogger=require('mongo_logger');
 
- or ``` import * as mongoLogger from 'mongo_logger' ```
+  or 
+
+  import * as mongoLogger from 'mongo_logger'
+```
 
  2- use mongoLogger into you api
   
  // create your own api doc
+ ```typescript
    var Doc ={
        statusCode: 200,
        apiId : 1,
@@ -61,6 +68,7 @@ npm install mongo_logger
        message : 'message'
    }
    mongoLogger.LogInfo(doc,DBUrl)
+   ```
 
 
 
