@@ -1,0 +1,22 @@
+{
+  "name": "mongo_logger",
+  "version": "1.0.0",
+  "description": "The most powerful mongo logger package",
+  "main": "logger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/hossamt93/mongo_logger.git"
+	},
+	"keywords": [
+		"mongo",
+		"mongodb",
+		"logger",
+    "js logger",
+    "mongo logger"
+	],
+  "author": "Hossam Taha <hossamtaha771@gmail.com>",
+  "license": "MIT"
+}
