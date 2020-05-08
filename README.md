@@ -74,3 +74,7 @@ npm install mongo_logger
 
  - `mongo_logger` uses currently mongodb 2.2.33 so `dbUrl` should be `mongodb://mongodb0.example.com:27017/dbName`
 
+
+ ## Change log
+You can take a look at the change log [here](https://github.com/hossamt93/mongo_logger/blob/master/CHANGELOG.md)
+
