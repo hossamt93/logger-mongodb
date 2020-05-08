@@ -2,6 +2,11 @@ var mongodb=require('mongodb');
 
 module.exports={
 
+    /**
+   * Log to mongo if logger level is info
+   * @param document  Object value(s) to be logged
+   * @param dbURL mongodb://mongodb0.example.com:27017/dbName
+   */
     logInfo: function(document, dbURL){
         
         if(document && document !=undefined){
@@ -10,6 +15,11 @@ module.exports={
         }
     },
 
+     /**
+   * Log to mongo if logger level is Error
+   * @param document  Object value(s) to be logged
+   * @param dbURL mongodb://mongodb0.example.com:27017/dbName
+   */
     logError: function (document, dbURL) {
 
         if(document  && document !=undefined){
@@ -17,6 +27,12 @@ module.exports={
             SaveLogToDB(dbURL,document);   
         }
     },
+
+     /**
+   * Log to mongo if logger level is Warn
+   * @param document  Object value(s) to be logged
+   * @param dbURL mongodb://mongodb0.example.com:27017/dbName
+   */
     logWarn: function (document, dbURL) {
 
         if(document && document !=undefined){
@@ -24,6 +40,12 @@ module.exports={
             SaveLogToDB(dbURL,document);   
         }
     },
+
+     /**
+   * Log to mongo if logger level is Debug
+   * @param document  Object value(s) to be logged
+   * @param dbURL mongodb://mongodb0.example.com:27017/dbName
+   */
     logDebug: function (document, dbURL) {
 
         if(document && document !=undefined){

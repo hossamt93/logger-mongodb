@@ -1,34 +1,34 @@
-# Mongo Logger
+# MongoDB Logger
 
-The most powerfull mongo logger package
+The most powerfull mongoDB logger package
 
 
 ## Install
 
 ```
-npm install mongo_logger
+npm install mongodb_logger
 ```
 
-## Why Mongo Logger is powerful?
+## Why MongoDB Logger is powerful?
  
  most of logging packages log messages as a string and most of messages contains alot of information that need to be organized,
  it mean what if we can log our message as an object of keys and values.
  It would be great !!.
- That's it mongo logger enables you to log not only your message but also you total document as an object, that's awesome isn't it ?
+ That's it mongodb logger enables you to log not only your message but also you total document as an object, that's awesome isn't it ?
 
  ## How to use ?
 
- mongo logger has two ways to use
+ mongodb logger has two ways to use
 
- ### 1- use mongo logger as a middleware
+ ### 1- use mongoDB logger as a middleware
 
-1- import mongo logger into your app
+1- import mongoDB logger into your app
 
-``` var mongoLogger=require('mongo_logger');``` 
+``` var MongoLogger=require('mongodb_logger');``` 
 
- or ``` import * as mongoLogger from 'mongo_logger' ```
+ or ``` import * as MongoLogger from 'mongodb_logger' ```
 
- 2- register mongologger as middleware logger
+ 2- register Mongologger as middleware logger
 
 ```typescript
  app.use(function(req,res,next){
@@ -37,7 +37,7 @@ npm install mongo_logger
              statusCode: res.statusCode,
              // and all the other fileds
          }
-         mongologger.logInfo(logDoc,DBUrl)
+         Mongologger.logInfo(logDoc,DBUrl)
      }
      // you may add another cases for logging Warn, Error and Debug
 
@@ -45,19 +45,19 @@ npm install mongo_logger
  });
  ```
 
- ### 1- use mongo logger in your api Controller
+ ### 1- use mongodb logger in your api Controller
 
- 1- import mongo logger into your controller
+ 1- import mongodb logger into your controller
 
 ```typescript
- var mongoLogger=require('mongo_logger');
+ var MongoLogger=require('mongo_logger');
 
   or 
 
-  import * as mongoLogger from 'mongo_logger'
+  import * as MongoLogger from 'mongo_logger'
 ```
 
- 2- use mongoLogger into you api
+ 2- use MongoLogger into you api
   
  // create your own api doc
  ```typescript
@@ -67,12 +67,12 @@ npm install mongo_logger
        apiName: '<your Api Name>',
        message : 'message'
    }
-   mongoLogger.LogInfo(doc,DBUrl)
+   MongoLogger.LogInfo(doc,DBUrl)
    ```
 
 ## `Note`
 
- - `mongo_logger` uses currently mongodb 2.2.33 so `dbUrl` should be `mongodb://mongodb0.example.com:27017/dbName`
+ - `mongodb_logger` uses currently mongodb 2.2.33 so `dbUrl` should be `mongodb://mongodb0.example.com:27017/dbName`
 
 
  ## Change log
