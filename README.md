@@ -41,7 +41,7 @@ var logger=new MongoLogger('<dbUrl>','<dbCollectionName>')
      if(res.statusCode == 200){
          var logDoc={
              statusCode: res.statusCode,
-             // and all the other fileds
+             // and all the other fields
          }
          logger.logInfo(logDoc)
      }
@@ -79,7 +79,7 @@ var logger=new MongoLogger('<dbUrl>','<dbCollectionName>')
        apiName: '<your Api Name>',
        message : 'message'
    }
-   logger.logInfo(doc,DBUrl)
+   logger.logInfo(doc)
    ```
 
 ## `Note`
