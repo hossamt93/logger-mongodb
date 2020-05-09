@@ -1,75 +1,78 @@
-var mongodb=require('mongodb');
+const DBLogger = require('./DBLogger');
 
-module.exports={
+class MongoLogger {
+    
+    /**
+     * initialize mongoLogger by specifying dbUrl and dbCollectionName
+     * @param {string} dbURL mongodb://mongodb0.example.com:27017/dbName
+     * @param {string} dbCollectionName Name of DB collection
+     */
+    constructor(dbURL, dbCollectionName) {
+        if (typeof dbCollectionName == 'string' && typeof dbURL == 'string') {
+            this.dbURL = dbURL;
+            this.dbCollectionName = dbCollectionName
+        }
+    }
 
     /**
-   * Log to mongo if logger level is info
-   * @param document  Object value(s) to be logged
-   * @param dbURL mongodb://mongodb0.example.com:27017/dbName
-   */
-    logInfo: function(document, dbURL){
-        
-        if(document && document !=undefined){
-            document.logLevel='Info'
-            SaveLogToDB(dbURL,document);   
+     * Log to mongo if logger level is info
+     * @param document  Object value(s) or string to be logged
+     */
+    logInfo(document) {
+
+        if (document && document != undefined) {
+            var doc = {
+                logLevel: 'Info',
+                Details: document
+            }
+            DBLogger.SaveLogToDB(this.dbURL, doc, this.dbCollectionName);
         }
-    },
+    }
 
-     /**
-   * Log to mongo if logger level is Error
-   * @param document  Object value(s) to be logged
-   * @param dbURL mongodb://mongodb0.example.com:27017/dbName
-   */
-    logError: function (document, dbURL) {
+    /**
+     * Log to mongo if logger level is Error
+     * @param document  Object value(s) or string to be logged
+     */
+    logError(document) {
 
-        if(document  && document !=undefined){
-            document.logLevel='Error'
-            SaveLogToDB(dbURL,document);   
+        if (document && document != undefined) {
+            var doc = {
+                logLevel: 'Error',
+                Details: document
+            }
+            DBLogger.SaveLogToDB(this.dbURL, doc, this.dbCollectionName);
         }
-    },
+    }
 
-     /**
-   * Log to mongo if logger level is Warn
-   * @param document  Object value(s) to be logged
-   * @param dbURL mongodb://mongodb0.example.com:27017/dbName
-   */
-    logWarn: function (document, dbURL) {
+    /**
+     * Log to mongo if logger level is Warn
+     * @param document  Object value(s) or string to be logged
+     */
+    logWarn(document) {
 
-        if(document && document !=undefined){
-            document.logLevel='Warn'
-            SaveLogToDB(dbURL,document);   
+        if (document && document != undefined) {
+            var doc = {
+                logLevel: 'Warn',
+                Details: document
+            }
+            DBLogger.SaveLogToDB(this.dbURL, doc, this.dbCollectionName);
         }
-    },
+    }
 
-     /**
-   * Log to mongo if logger level is Debug
-   * @param document  Object value(s) to be logged
-   * @param dbURL mongodb://mongodb0.example.com:27017/dbName
-   */
-    logDebug: function (document, dbURL) {
+    /**
+     * Log to mongo if logger level is Debug
+     * @param document  Object value(s) or string to be logged
+     */
+    logDebug(document) {
 
-        if(document && document !=undefined){
-            document.logLevel='Debug'
-            SaveLogToDB(dbURL,document);   
+        if (document && document != undefined) {
+            var doc = {
+                logLevel: 'Debug',
+                Details: document
+            }
+            DBLogger.SaveLogToDB(this.dbURL, doc, this.dbCollectionName);
         }
     }
 }
 
-function SaveLogToDB(dbURL,document){
-    try
-    {
-        mongodb.MongoClient.connect(dbURL,function (err,db) {
-            if(err)
-                throw err;
-
-            db.collection('log').insertOne(document, function(err, res) {
-                    if (err) throw err;
-
-                db.close();
-            }); 
-        });
-    }
-    catch (error) {
-        throw error;
-    }
-}
+module.exports = MongoLogger
