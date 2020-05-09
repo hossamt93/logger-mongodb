@@ -2,8 +2,8 @@ var mongodb=require('mongodb');
 
 module.exports={
 
-      /**
-   * Log to mongo if logger level is info
+    /**
+   * save log to DB collection takes three parameters
    * @param {object} document  Object value(s) or string to be logged
    * @param {string} dbURL mongodb://mongodb0.example.com:27017/dbName
    * @param {string} dbCollectionName Name of DB collection

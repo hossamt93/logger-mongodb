@@ -73,6 +73,21 @@ class MongoLogger {
             DBLogger.SaveLogToDB(this.dbURL, doc, this.dbCollectionName);
         }
     }
+
+     /**
+     * Log to mongo if logger level is Fatal
+     * @param document  Object value(s) or string to be logged
+     */
+    logFatal(document) {
+
+        if (document && document != undefined) {
+            var doc = {
+                logLevel: 'Fatal',
+                Details: document
+            }
+            DBLogger.SaveLogToDB(this.dbURL, doc, this.dbCollectionName);
+        }
+    }
 }
 
 module.exports = MongoLogger

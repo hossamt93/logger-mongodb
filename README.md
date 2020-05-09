@@ -71,8 +71,10 @@ var logger=new MongoLogger('<dbUrl>','<dbCollectionName>')
 
  2- use MongoLogger into you api
   
- // create your own api doc
+ 
  ```typescript
+ // create your own api doc
+ 
    var Doc ={
        statusCode: 200,
        apiId : 1,
