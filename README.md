@@ -11,11 +11,13 @@ npm install logger-mongodb
 
 ## `Why MongoDB Logger is powerful?`
  
- most of logging packages log messages as a string and most of messages contains alot of information that need to be organized,
+ - most of logging packages log messages as a string and most of messages contains alot of information that need to be organized,
  it mean what if we can log our message as an object of keys and values.
  It would be great !!.
- That's it mongodb logger enables you to log not only your message but also your total document as an object, that's awesome isn't it ?
- and you can also log your document as a message if you want.
+
+ - That's it mongodb logger enables you to log not only your message but also your total document as an object, that's awesome isn't it, and you can also log your document as a message if you want.
+
+ - mongo logger is suitable for distributed systems, it means you can log into many DBs with many collections.
 
  ## `How to use ?`
 
@@ -83,8 +85,6 @@ var logger=new MongoLogger('<dbUrl>','<dbCollectionName>')
 ## `Note`
 
  - `logger-mongodb` uses currently mongodb 2.2.33 so `dbUrl` should be `mongodb://mongodb0.example.com:27017/dbName`
-
- - Do you know that mongo logger is suitable for distributed systems, it means you can log into many DBs with many collections.
 
 
  ## `Change log`
