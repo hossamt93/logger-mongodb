@@ -84,7 +84,7 @@ var logger=new MongoLogger('<dbUrl>','<dbCollectionName>')
 
  - `logger-mongodb` uses currently mongodb 2.2.33 so `dbUrl` should be `mongodb://mongodb0.example.com:27017/dbName`
 
- - Do you know that mongo logger is suitable for distributed system, it means you can log into many DBs with many collections.
+ - Do you know that mongo logger is suitable for distributed systems, it means you can log into many DBs with many collections.
 
 
  ## `Change log`
